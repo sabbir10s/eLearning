@@ -1,10 +1,11 @@
 import Speaking from "../../Assets/icon/public speaking.svg";
 import Career from "../../Assets/icon/career.svg";
 import Creative from "../../Assets/icon/creative.svg";
+import bannerImg from "../../Assets/Images/bannerImg.png";
 const BannerSection = () => {
   return (
-    <div>
-      <div>
+    <div className="grid grid-cols-2 gap-20 py-[40px] bg-hero-bg bg-center bg-middle bg-cover">
+      <div className="">
         <h1 className=" font-bold text-secondary lg:text-[68px] capitalize leading-[82px]">
           up your <span className="text-primary">skills</span> to{" "}
           <span className="text-primary">advance</span> your{" "}
@@ -37,6 +38,9 @@ const BannerSection = () => {
             <p className="text-secondary/70">Creative Thinking</p>
           </div>
         </div>
+      </div>
+      <div className="flex justify-end">
+        <img src={bannerImg} alt="" />
       </div>
     </div>
   );

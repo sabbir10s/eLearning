@@ -39,6 +39,9 @@ export default {
         Inter: ["Inter", "sans-serif"],
         // localFont: ["ADELIA", "cursive"],
       },
+      backgroundImage: {
+        'hero-bg': "url('/src/Assets/Images/herobgImg.png')",
+      }
     },
     screens: {
       xs: "480px",

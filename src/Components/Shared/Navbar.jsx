@@ -1,4 +1,4 @@
-import logo from "../../Assets/logo.png";
+import logo from "../../Assets/Images/logo.png";
 const Navbar = () => {
   return (
     <div className=" container mx-auto py-4">

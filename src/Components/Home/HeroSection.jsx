@@ -2,9 +2,9 @@ import Speaking from "../../Assets/icon/public speaking.svg";
 import Career from "../../Assets/icon/career.svg";
 import Creative from "../../Assets/icon/creative.svg";
 import bannerImg from "../../Assets/Images/bannerImg.png";
-const BannerSection = () => {
+const HeroSection = () => {
   return (
-    <div className="grid grid-cols-2 gap-20 py-[40px] bg-hero-bg bg-center bg-middle bg-cover">
+    <div className="grid grid-cols-2 gap-20 pt-[40px] bg-hero-bg bg-center bg-middle bg-cover">
       <div className="">
         <h1 className=" font-bold text-secondary lg:text-[68px] capitalize leading-[82px]">
           up your <span className="text-primary">skills</span> to{" "}
@@ -46,4 +46,4 @@ const BannerSection = () => {
   );
 };
 
-export default BannerSection;
+export default HeroSection;

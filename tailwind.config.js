@@ -39,6 +39,9 @@ export default {
         Inter: ["Inter", "sans-serif"],
         // localFont: ["ADELIA", "cursive"],
       },
+      boxShadow: {
+        custom: '3px 0 110px -50px rgba(0, 0, 0, 0.3)',
+      },
       backgroundImage: {
         'hero-bg': "url('/src/Assets/Images/herobgImg.png')",
       }
@@ -53,6 +56,7 @@ export default {
     },
 
   },
-  plugins: [],
+  plugins: [
+  ],
 }
 

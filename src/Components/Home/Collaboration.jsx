@@ -5,7 +5,7 @@ import magicLeap from "../../Assets/Images/companyLogos/magicLeap.png";
 
 const Collaboration = () => {
   return (
-    <div className="flex items-center justify-between pt-[73px]">
+    <div className="flex items-center justify-between pt-[73px] container mx-auto">
       <div>
         <h2 className="text-primary font-bold lg:text-[30px]">250+</h2>
         <h4 className="text-secondary lg:text-[25px]">Collaboration</h4>

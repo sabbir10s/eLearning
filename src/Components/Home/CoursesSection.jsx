@@ -5,7 +5,7 @@ import CoursesSlider from "../Slider/CoursesSlider";
 const CoursesSection = () => {
   console.log(Courses);
   return (
-    <div>
+    <div className="container mx-auto">
       <div className="lg:pt-[115px] lg:pb-[40px]">
         <h5 className="text-primary-700 font-semibold">Explore Programs</h5>
         <h2 className="text-secondary font-semibold lg:text-[36px] mt-3">

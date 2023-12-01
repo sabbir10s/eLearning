@@ -67,7 +67,13 @@ const CoursesSlider = () => {
           }) => (
             <div key={name} className="p-3 bg-transparent focus:outline-none">
               <div className="p-6 shadow-md rounded-lg relative">
-                <img src={image} alt={`${name} cover`} className="mb-4" />
+                <div className="w-full h-full mb-4">
+                  <img
+                    className=" w-full object-cover"
+                    src={image}
+                    alt={`${name} cover`}
+                  />
+                </div>
                 <div className="bg-white flex items-center gap-2 px-2 py-1 rounded absolute top-8 right-8">
                   <img src={watch} alt="" />
                   <span className="text-[14px] text-[#667085]">{duration}</span>

@@ -55,7 +55,7 @@ const ServiceSlider = () => {
             key={item.serviceName}
             className="p-3 bg-transparent focus:outline-none"
           >
-            <div className="bg-white hover:bg-primary text-secondary hover:text-white group p-4 shadow-xl rounded-md border border-[#D8D8D8]/40">
+            <div className="bg-white hover:bg-primary text-secondary hover:text-white group p-4 shadow-md rounded-md border border-[#D8D8D8]/40">
               <div className="flex items-center gap-4">
                 <img
                   src={item.logo}
@@ -93,7 +93,7 @@ const ServiceSlider = () => {
         ))}
       </Slider>
 
-      <div className="absolute bottom-[-4] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">
         {serviceData.map((_, index) => (
           <button
             key={index}

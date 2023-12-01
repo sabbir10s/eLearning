@@ -6,6 +6,7 @@ import { useRef, useState } from "react";
 import { Courses } from "../../../public/Courses";
 import watch from "../../Assets/icon/svg/watch.svg";
 import StarRating from "../../Shared/StarRating/StarRating";
+import { Link } from "react-router-dom";
 const CoursesSlider = () => {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -57,13 +58,13 @@ const CoursesSlider = () => {
             key={course.name}
             className="p-3 bg-transparent focus:outline-none"
           >
-            <div className="p-4 border rounded-lg relative">
+            <div className="p-6 shadow-md rounded-lg relative">
               <img
                 src={course.image}
                 alt={`${course.name} cover`}
                 className="mb-4"
               />
-              <div className="bg-white flex items-center gap-2 px-2 py-1 rounded absolute top-6 right-8">
+              <div className="bg-white flex items-center gap-2 px-2 py-1 rounded absolute top-8 right-8">
                 <img src={watch} alt="" />
                 <span className="text-[14px] text-[#667085]">
                   {course.duration}
@@ -72,20 +73,64 @@ const CoursesSlider = () => {
               <span className="text-primary-700 font-medium text-sm">
                 {course.tag}
               </span>
-              <h3 className="text-secondary lg:text-2xl font-semibold">
-                {course.name}
-              </h3>
-              <p className="text-base text-secondary-500">{course.details}</p>
-              <div>
+              <Link className="flex justify-between items-center">
+                <h3 className="text-secondary lg:text-2xl font-semibold">
+                  {course.name.split(" ").slice(0, 3).join(" ")}
+                  {course.name.split(" ").length > 3 && "..."}
+                </h3>
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 12 12"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M1 11L11 1M11 1H1M11 1V11"
+                    stroke="#101828"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+              </Link>
+              <p className="text-base text-secondary-500 pt-[12px]">
+                {course.details}
+              </p>
+              <div className="flex items-center gap-1 lg:pt-[22px ]">
                 <span className="text-primary">{course.ratings}</span>
                 <StarRating rating={course.ratings} />
+                <span className="text-sm text-[#969696]">
+                  ({course.totalRatings})
+                </span>
+              </div>
+              {/* Author */}
+              <div className="flex items-center justify-between lg:pt-[32px]">
+                <div className="flex items-center gap-3">
+                  <img
+                    className="lg:w-[40px] lg:h-[40px] rounded-full"
+                    src={course.author.profile}
+                    alt=""
+                  />
+                  <div className="flex flex-col">
+                    <span className="text-sm text-secondary font-medium">
+                      {course.author.name}
+                    </span>
+                    <span className="text-sm text-secondary-500">
+                      {course.author.enrolled} Enrolled
+                    </span>
+                  </div>
+                </div>
+                <h2 className="text-[26px] font-bold text-primary">
+                  {course.price}
+                </h2>
               </div>
             </div>
           </div>
         ))}
       </Slider>
 
-      <div className="absolute bottom-[-4] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">
         {Courses.map((_, index) => (
           <button
             key={index}

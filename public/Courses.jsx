@@ -69,7 +69,7 @@ export const Courses = [
     },
   },
   {
-    name: "Graphic Design Masterclass",
+    name: "Graphic Design",
     duration: "06 hr 30 mins",
     price: "$129",
     image: graphicDesign,

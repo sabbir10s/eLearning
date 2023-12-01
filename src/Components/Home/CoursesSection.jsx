@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { Courses } from "../../../public/Courses";
 import CoursesSlider from "../Slider/CoursesSlider";
 
@@ -17,6 +18,12 @@ const CoursesSection = () => {
       </div>
 
       <CoursesSlider />
+
+      <div className="text-center lg:pt-[90px]">
+        <Link className="text-secondary border border-secondary-300 px-4 py-2.5 text-sm font-semibold rounded-lg hover:border-primary-900 hover:text-primary-900 duration-300">
+          Explore All Programs
+        </Link>
+      </div>
     </div>
   );
 };

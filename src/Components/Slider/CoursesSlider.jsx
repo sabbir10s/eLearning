@@ -2,9 +2,11 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import { serviceData } from "../../../public/service";
 import { useRef, useState } from "react";
-const ServiceSlider = () => {
+import { Courses } from "../../../public/Courses";
+import watch from "../../Assets/icon/svg/watch.svg";
+import StarRating from "../../Shared/StarRating/StarRating";
+const CoursesSlider = () => {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
   const settings = {
@@ -50,51 +52,41 @@ const ServiceSlider = () => {
   return (
     <div className="relative">
       <Slider ref={sliderRef} {...settings}>
-        {serviceData.map((item) => (
+        {Courses.map((course) => (
           <div
-            key={item.serviceName}
+            key={course.name}
             className="p-3 bg-transparent focus:outline-none"
           >
-            <div className="bg-white hover:bg-primary text-secondary hover:text-white group p-4 shadow-xl rounded-md border border-[#D8D8D8]/40">
-              <div className="flex items-center gap-4">
-                <img
-                  src={item.logo}
-                  alt={`${item.serviceName} Logo`}
-                  className="mb-4"
-                />
-                <h3 className="lg:text-2xl font-bold mb-2">
-                  {item.serviceName}
-                </h3>
+            <div className="p-4 border rounded-lg relative">
+              <img
+                src={course.image}
+                alt={`${course.name} cover`}
+                className="mb-4"
+              />
+              <div className="bg-white flex items-center gap-2 px-2 py-1 rounded absolute top-6 right-8">
+                <img src={watch} alt="" />
+                <span className="text-[14px] text-[#667085]">
+                  {course.duration}
+                </span>
               </div>
-              <p className="text-[#646464] group-hover:text-white pt-[30px] pb-[22px]">
-                {item.details.description.slice(0, 100)}
-              </p>
-              <button className="text-primary group-hover:text-white font-medium text-[18px] flex items-center gap-[20px]">
-                <span> Learn more</span>
-                <svg
-                  className=" stroke-current"
-                  width="8"
-                  height="13"
-                  viewBox="0 0 8 13"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1.5 11.5L6.5 6.5L1.5 1.5"
-                    // stroke="#7F56D9"
-                    strokeWidth="1.75"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </button>
+              <span className="text-primary-700 font-medium text-sm">
+                {course.tag}
+              </span>
+              <h3 className="text-secondary lg:text-2xl font-semibold">
+                {course.name}
+              </h3>
+              <p className="text-base text-secondary-500">{course.details}</p>
+              <div>
+                <span className="text-primary">{course.ratings}</span>
+                <StarRating rating={course.ratings} />
+              </div>
             </div>
           </div>
         ))}
       </Slider>
 
       <div className="absolute bottom-[-4] left-1/2 transform -translate-x-1/2">
-        {serviceData.map((_, index) => (
+        {Courses.map((_, index) => (
           <button
             key={index}
             className={`h-3 w-3 mx-1 rounded-full ${
@@ -108,4 +100,4 @@ const ServiceSlider = () => {
   );
 };
 
-export default ServiceSlider;
+export default CoursesSlider;

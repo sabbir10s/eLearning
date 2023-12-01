@@ -1,4 +1,5 @@
 import Collaboration from "../../Components/Home/Collaboration";
+import CoursesSection from "../../Components/Home/CoursesSection";
 import HeroSection from "../../Components/Home/HeroSection";
 import ServiceSection from "../../Components/Home/ServiceSection";
 
@@ -8,6 +9,7 @@ const Home = () => {
       <HeroSection />
       <Collaboration />
       <ServiceSection />
+      <CoursesSection />
     </div>
   );
 };

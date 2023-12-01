@@ -53,7 +53,7 @@ const Navbar = () => {
                   id="explore"
                   className="focus:outline-none appearance-none bg-primary-25 pr-4 pl-2 text-primary font-medium"
                 >
-                  <option selected>Explore</option>
+                  <option>Explore</option>
                   <option value="CA">Canada</option>
                   <option value="FR">France</option>
                   <option value="DE">Germany</option>

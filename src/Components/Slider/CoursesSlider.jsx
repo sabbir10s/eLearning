@@ -53,81 +53,84 @@ const CoursesSlider = () => {
   return (
     <div className="relative">
       <Slider ref={sliderRef} {...settings}>
-        {Courses.map((course) => (
-          <div
-            key={course.name}
-            className="p-3 bg-transparent focus:outline-none"
-          >
-            <div className="p-6 shadow-md rounded-lg relative">
-              <img
-                src={course.image}
-                alt={`${course.name} cover`}
-                className="mb-4"
-              />
-              <div className="bg-white flex items-center gap-2 px-2 py-1 rounded absolute top-8 right-8">
-                <img src={watch} alt="" />
-                <span className="text-[14px] text-[#667085]">
-                  {course.duration}
-                </span>
-              </div>
-              <span className="text-primary-700 font-medium text-sm">
-                {course.tag}
-              </span>
-              <Link className="flex justify-between items-center">
-                <h3 className="text-secondary lg:text-2xl font-semibold">
-                  {course.name.split(" ").slice(0, 3).join(" ")}
-                  {course.name.split(" ").length > 3 && "..."}
-                </h3>
-                <svg
-                  width="12"
-                  height="12"
-                  viewBox="0 0 12 12"
-                  fill="none"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="M1 11L11 1M11 1H1M11 1V11"
-                    stroke="#101828"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </Link>
-              <p className="text-base text-secondary-500 pt-[12px]">
-                {course.details}
-              </p>
-              <div className="flex items-center gap-1 lg:pt-[22px ]">
-                <span className="text-primary">{course.ratings}</span>
-                <StarRating rating={course.ratings} />
-                <span className="text-sm text-[#969696]">
-                  ({course.totalRatings})
-                </span>
-              </div>
-              {/* Author */}
-              <div className="flex items-center justify-between lg:pt-[32px]">
-                <div className="flex items-center gap-3">
-                  <img
-                    className="lg:w-[40px] lg:h-[40px] rounded-full"
-                    src={course.author.profile}
-                    alt=""
-                  />
-                  <div className="flex flex-col">
-                    <span className="text-sm text-secondary font-medium">
-                      {course.author.name}
-                    </span>
-                    <span className="text-sm text-secondary-500">
-                      {course.author.enrolled} Enrolled
-                    </span>
-                  </div>
+        {Courses.map(
+          ({
+            image,
+            duration,
+            tag,
+            name,
+            details,
+            ratings,
+            totalRatings,
+            author,
+            price,
+          }) => (
+            <div key={name} className="p-3 bg-transparent focus:outline-none">
+              <div className="p-6 shadow-md rounded-lg relative">
+                <img src={image} alt={`${name} cover`} className="mb-4" />
+                <div className="bg-white flex items-center gap-2 px-2 py-1 rounded absolute top-8 right-8">
+                  <img src={watch} alt="" />
+                  <span className="text-[14px] text-[#667085]">{duration}</span>
                 </div>
-                <h2 className="text-[26px] font-bold text-primary">
-                  {course.price}
-                </h2>
+                <span className="text-primary-700 font-medium text-sm">
+                  {tag}
+                </span>
+                <Link className="flex justify-between items-center">
+                  <h3 className="text-secondary lg:text-2xl font-semibold">
+                    {name.split(" ").slice(0, 3).join(" ")}
+                    {name.split(" ").length > 3 && "..."}
+                  </h3>
+                  <svg
+                    width="12"
+                    height="12"
+                    viewBox="0 0 12 12"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M1 11L11 1M11 1H1M11 1V11"
+                      stroke="#101828"
+                      strokeWidth="2"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                    />
+                  </svg>
+                </Link>
+                <p className="text-base text-secondary-500 pt-[12px]">
+                  {details}
+                </p>
+                <div className="flex items-center gap-1 lg:pt-[22px ]">
+                  <span className="text-primary">{ratings}</span>
+                  <StarRating rating={ratings} />
+                  <span className="text-sm text-[#969696]">
+                    ({totalRatings})
+                  </span>
+                </div>
+                {/* Author */}
+                <div className="flex items-center justify-between lg:pt-[32px]">
+                  <div className="flex items-center gap-3">
+                    <img
+                      className="lg:w-[40px] lg:h-[40px] rounded-full"
+                      src={author.profile}
+                      alt=""
+                    />
+                    <div className="flex flex-col">
+                      <span className="text-sm text-secondary font-medium">
+                        {author.name}
+                      </span>
+                      <span className="text-sm text-secondary-500">
+                        {author.enrolled} Enrolled
+                      </span>
+                    </div>
+                  </div>
+                  <h2 className="text-[26px] font-bold text-primary">
+                    {price}
+                  </h2>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          )
+        )}
       </Slider>
 
       <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">

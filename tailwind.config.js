@@ -43,7 +43,8 @@ export default {
         custom: '3px 0 110px -50px rgba(0, 0, 0, 0.3)',
       },
       backgroundImage: {
-        'hero-bg': "url('/src/Assets/Images/herobgImg.png')",
+        'hero-bg': "url('/src/Assets/Images/others/heroBgImg.png')",
+        'tutors-card-bg': "url('/src/Assets/Images/others/Team member bg.png')",
       }
     },
     screens: {

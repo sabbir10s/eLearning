@@ -1,7 +1,7 @@
-import Speaking from "../../Assets/icon/public speaking.svg";
-import Career from "../../Assets/icon/career.svg";
-import Creative from "../../Assets/icon/creative.svg";
-import bannerImg from "../../Assets/Images/bannerImg.png";
+import Speaking from "../../Assets/icon/svg/public speaking.svg";
+import Career from "../../Assets/icon/svg/career.svg";
+import Creative from "../../Assets/icon/svg/creative.svg";
+import bannerImg from "../../Assets/Images/others/bannerImg.png";
 const HeroSection = () => {
   return (
     <div className="grid grid-cols-2 gap-20 pt-[40px] bg-hero-bg bg-center bg-middle bg-cover">

@@ -17,7 +17,9 @@ const CoursesSection = () => {
         </p>
       </div>
 
-      <CoursesSlider />
+      <div className="w-[300px] xs:w-full mx-auto sm:mx-0 ">
+        <CoursesSlider />
+      </div>
 
       <div className="text-center lg:pt-[90px]">
         <Link className="text-secondary border border-secondary-300 px-4 py-2.5 text-sm font-semibold rounded-lg hover:border-primary-900 hover:text-primary-900 duration-300">

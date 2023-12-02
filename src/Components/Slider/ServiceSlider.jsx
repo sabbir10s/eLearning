@@ -7,6 +7,7 @@ import { useRef, useState } from "react";
 const ServiceSlider = () => {
   const sliderRef = useRef(null);
   const [currentSlide, setCurrentSlide] = useState(0);
+
   const settings = {
     dots: false,
     infinite: true,
@@ -15,10 +16,11 @@ const ServiceSlider = () => {
     autoplay: true,
     autoplaySpeed: 3000,
     pauseOnHover: true,
+
     beforeChange: (current, next) => setCurrentSlide(next),
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -27,7 +29,7 @@ const ServiceSlider = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -35,7 +37,7 @@ const ServiceSlider = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 680,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -53,7 +55,7 @@ const ServiceSlider = () => {
         {serviceData.map((item) => (
           <div
             key={item.serviceName}
-            className="p-3 bg-transparent focus:outline-none"
+            className="p-0 md:p-3 bg-transparent focus:outline-none w-full "
           >
             <div className="bg-white hover:bg-primary text-secondary hover:text-white group p-4 shadow-md rounded-md border border-[#D8D8D8]/40">
               <div className="flex items-center gap-4">

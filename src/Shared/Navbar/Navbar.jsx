@@ -28,7 +28,7 @@ const Navbar = () => {
     setIsOpen(false);
   };
   return (
-    <div className=" container mx-auto py-4">
+    <div className=" container mx-auto py-4 px-2 md:px-0">
       <div className="flex items-center justify-center pb-4 sm:hidden">
         <Link>
           <img className="w-[170px]" src={logo} alt="" />
@@ -66,7 +66,7 @@ const Navbar = () => {
             <span className=" absolute right-2.5 top-2">
               <span className=" relative">
                 <svg
-                  className=" absolute right-0 top-2"
+                  className=" absolute right-0 top-1"
                   width="12"
                   height="8"
                   viewBox="0 0 12 8"
@@ -131,8 +131,8 @@ const Navbar = () => {
             </button>
 
             {isOpen && (
-              <div className="absolute right-0 z-10 mt-1 w-48 py-2 text-left text-sm text-gray-700 bg-white rounded-lg shadow ">
-                <div className="py-1 flex flex-col gap-6 pl-4">
+              <div className="absolute left-0 sm:left-auto sm:right-0 z-10 mt-1 w-56 p-8 text-left text-sm text-gray-700 rounded-lg shadow backdrop-blur-lg border border-primary">
+                <div className="py-1 flex flex-col gap-6">
                   <div className="flex flex-col gap-6 text-secondary font-medium">
                     <ul className=" space-y-6">
                       <li onClick={handleOptionClick}>Program</li>

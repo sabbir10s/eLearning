@@ -21,7 +21,7 @@ const CoursesSlider = () => {
     beforeChange: (current, next) => setCurrentSlide(next),
     responsive: [
       {
-        breakpoint: 1024,
+        breakpoint: 1280,
         settings: {
           slidesToShow: 3,
           slidesToScroll: 3,
@@ -30,7 +30,7 @@ const CoursesSlider = () => {
         },
       },
       {
-        breakpoint: 600,
+        breakpoint: 1024,
         settings: {
           slidesToShow: 2,
           slidesToScroll: 2,
@@ -38,7 +38,7 @@ const CoursesSlider = () => {
         },
       },
       {
-        breakpoint: 480,
+        breakpoint: 680,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -65,7 +65,7 @@ const CoursesSlider = () => {
             author,
             price,
           }) => (
-            <div key={name} className="p-3 bg-transparent focus:outline-none">
+            <div key={name} className="p-0 md:p-3 focus:outline-none">
               <div className="p-6 shadow-md rounded-lg relative">
                 <div className="w-full h-full mb-4">
                   <img
@@ -113,10 +113,10 @@ const CoursesSlider = () => {
                   </span>
                 </div>
                 {/* Author */}
-                <div className="flex items-center justify-between lg:pt-[32px]">
+                <div className="flex items-center justify-between pt-[32px]">
                   <div className="flex items-center gap-3">
                     <img
-                      className="lg:w-[40px] lg:h-[40px] rounded-full"
+                      className="w-[40px] h-[40px] rounded-full"
                       src={author.profile}
                       alt=""
                     />

@@ -4,7 +4,10 @@ const TestimonialSection = () => {
   return (
     <div className="bg-secondary-50 lg:pt-[100px]">
       <img className="mx-auto pb-[40px]" src={logo} alt="" />
-      <TestimonialSlider />
+
+      <div className="w-[300px] xs:w-full mx-auto sm:mx-0 ">
+        <TestimonialSlider />
+      </div>
     </div>
   );
 };

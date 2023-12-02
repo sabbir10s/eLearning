@@ -10,7 +10,9 @@ const ServiceSection = () => {
         </h2>
       </div>
 
-      <ServiceSlider />
+      <div className="w-[300px] xs:w-full mx-auto sm:mx-0 ">
+        <ServiceSlider />
+      </div>
     </div>
   );
 };

@@ -5,15 +5,29 @@ import magicLeap from "../../Assets/Images/companyLogos/magicLeap.png";
 
 const Collaboration = () => {
   return (
-    <div className="flex items-center justify-between pt-[73px] container mx-auto">
+    <div className="flex flex-col md:flex-row justify-between pt-[73px] container mx-auto">
       <div>
         <h2 className="text-primary font-bold lg:text-[30px]">250+</h2>
         <h4 className="text-secondary lg:text-[25px]">Collaboration</h4>
       </div>
-      <img src={duolingo} alt="" />
-      <img src={codecov} alt="" />
-      <img src={userTesting} alt="" />
-      <img src={magicLeap} alt="" />
+      <div className="flex justify-between gap-2 md:gap-10 pt-4">
+        <img
+          className="w-[70px] sm:w-[130px] md:w-full"
+          src={duolingo}
+          alt=""
+        />
+        <img className="w-[70px] sm:w-[130px] md:w-full" src={codecov} alt="" />
+        <img
+          className="w-[70px] sm:w-[130px] md:w-full"
+          src={userTesting}
+          alt=""
+        />
+        <img
+          className="w-[70px] sm:w-[130px] md:w-full"
+          src={magicLeap}
+          alt=""
+        />
+      </div>
     </div>
   );
 };

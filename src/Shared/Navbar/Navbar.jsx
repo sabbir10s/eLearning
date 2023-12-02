@@ -1,13 +1,45 @@
+import { useEffect, useRef, useState } from "react";
 import logo from "../../Assets/Images/others/logo.png";
+import { Link } from "react-router-dom";
 const Navbar = () => {
+  //Dropdown options
+  const [isOpen, setIsOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+  };
+
+  useEffect(() => {
+    const handleOutsideClick = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleOutsideClick);
+
+    return () => {
+      document.removeEventListener("mousedown", handleOutsideClick);
+    };
+  }, []);
+
+  const handleOptionClick = () => {
+    setIsOpen(false);
+  };
   return (
     <div className=" container mx-auto py-4">
-      <div className="flex items-center justify-between">
-        <ul className="flex items-center gap-6 text-secondary font-medium">
-          <li>
-            <img className="w-[170px]" src={logo} alt="" />
-          </li>
-          <li className=" relative">
+      <div className="flex items-center justify-center pb-4 sm:hidden">
+        <Link>
+          <img className="w-[170px]" src={logo} alt="" />
+        </Link>
+      </div>
+      <div className="flex items-center justify-between ">
+        <div className="flex items-center w-full sm:w-fit sm:gap-6 text-secondary font-medium">
+          <Link>
+            <img className="w-[170px] hidden sm:block" src={logo} alt="" />
+          </Link>
+          <div className="relative w-full sm:w-fit">
             <svg
               className=" absolute left-2.5 top-3"
               width="18"
@@ -26,7 +58,7 @@ const Navbar = () => {
             </svg>
 
             <input
-              className="border border-[#D0D5DD] rounded-[8px] py-2 pl-10 outline-none active:border-primary focus:border-primary min-w-[300px] font-normal"
+              className="border border-[#D0D5DD] rounded-[8px] py-2 pl-10 outline-none active:border-primary focus:border-primary w-full sm:min-w-[300px] font-normal"
               type="text"
               placeholder="Want to learn?"
             />
@@ -60,17 +92,66 @@ const Navbar = () => {
                 </select>
               </span>
             </span>
-          </li>
+          </div>
 
-          <li>Program</li>
-          <li>Enterprise</li>
-          <li>Universities</li>
-        </ul>
-        <div className="flex items-center font-medium text-secondary gap-6">
+          <ul className="hidden lg:flex items-center gap-6">
+            <li>Program</li>
+            <li>Enterprise</li>
+            <li>Universities</li>
+          </ul>
+        </div>
+        <div className="hidden lg:flex items-center font-medium text-secondary gap-6">
           <a href="#">Sign In</a>
           <a href="#" className="text-white bg-primary py-2 px-3 rounded-lg">
             Create Free Account
           </a>
+        </div>
+
+        <div className=" absolute top-4 sm:static left-0 lg:hidden pl-2 transition">
+          <div className="relative" ref={dropdownRef}>
+            <button
+              type="button"
+              className=" py-2 text-secondary transition"
+              onClick={toggleDropdown}
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                strokeWidth="1.5"
+                stroke="currentColor"
+                className="w-6 h-6"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+                />
+              </svg>
+            </button>
+
+            {isOpen && (
+              <div className="absolute right-0 z-10 mt-1 w-48 py-2 text-left text-sm text-gray-700 bg-white rounded-lg shadow ">
+                <div className="py-1 flex flex-col gap-6 pl-4">
+                  <div className="flex flex-col gap-6 text-secondary font-medium">
+                    <ul className=" space-y-6">
+                      <li onClick={handleOptionClick}>Program</li>
+                      <li>Enterprise</li>
+                      <li>Universities</li>
+                      <li>
+                        <Link to="/SignIn">Sign In</Link>
+                      </li>
+                      <li>
+                        <Link className="text-white bg-primary py-2 px-3 rounded-lg">
+                          Create Account
+                        </Link>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
       </div>
     </div>

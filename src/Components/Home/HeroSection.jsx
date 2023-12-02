@@ -7,8 +7,8 @@ const HeroSection = () => {
   return (
     <div>
       <div className="container mx-auto">
-        <div className="grid grid-cols-2 gap-20 pt-[40px]">
-          <div>
+        <div className="grid grid-cols-1 md:grid-cols-2 justify-items-center gap-20 pt-[40px]">
+          <div className=" order-2 md:order-1">
             <h1 className=" font-bold text-secondary lg:text-[68px] capitalize leading-[82px]">
               up your <span className="text-primary">skills</span> to{" "}
               <span className="text-primary">advance</span> your{" "}
@@ -42,7 +42,7 @@ const HeroSection = () => {
               </div>
             </div>
           </div>
-          <div className="flex justify-end">
+          <div className="flex justify-end order-1 md:order-2">
             <img src={bannerImg} alt="" />
           </div>
         </div>

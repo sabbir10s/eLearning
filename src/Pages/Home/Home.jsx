@@ -1,3 +1,4 @@
+import BlogsSection from "../../Components/Home/BlogsSection";
 import Collaboration from "../../Components/Home/Collaboration";
 import CoursesSection from "../../Components/Home/CoursesSection";
 import HeroSection from "../../Components/Home/HeroSection";
@@ -14,6 +15,7 @@ const Home = () => {
       <CoursesSection />
       <TutorsSection />
       <TestimonialSection />
+      <BlogsSection />
     </div>
   );
 };

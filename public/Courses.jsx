@@ -27,7 +27,7 @@ export const Courses = [
     image: webDesign,
     tag: "Design",
     details:
-      "Learn the basics of data science, including data analysis and machine learning.",
+      "Learn the basics of data science, including data analysis learning.",
     ratings: 4.5,
     totalRatings: 900,
     author: {
@@ -75,7 +75,7 @@ export const Courses = [
     image: graphicDesign,
     tag: "Graphic Design",
     details:
-      "Unlock your creativity and master graphic design tools with hands-on projects.",
+      "Unlock your creativity and master graphic design tools with projects.",
     ratings: 4.6,
     totalRatings: 1100,
     author: {

@@ -25,7 +25,7 @@ const TestimonialSlider = () => {
       <Slider ref={sliderRef} {...settings}>
         {Testimonials.map(({ testimonial, profile, name, occupation }) => (
           <div key={testimonial} className=" text-center">
-            <h2 className="text-secondary text-[36px] xl:text-[48px] font-medium  text-center font-Inter pb-[32px]">
+            <h2 className="text-secondary font-semibold text-[20px] sm:text-[24px] md:text-[36px] pb-[32px]">
               {testimonial}
             </h2>
             <img
@@ -41,7 +41,7 @@ const TestimonialSlider = () => {
         ))}
       </Slider>
 
-      <div className="absolute bottom-[-80px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">
         {Testimonials.map((_, index) => (
           <button
             key={index}

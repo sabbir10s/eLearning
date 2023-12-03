@@ -1,10 +1,10 @@
 import { Tutors } from "../../../public/Tutors";
 const TutorsSection = () => {
   return (
-    <div className="container mx-auto pb-[80px]">
-      <div className="max-w-[768px] mx-auto text-center lg:pt-[115px] pb-[40px]">
+    <div className="container mx-auto pb-[80px] pt-[50px] sm:pt-[80px] md:pt-[100px] lg:pt-[115px] px-2 md:px-0">
+      <div className="max-w-full sm:max-w-[600px] md:max-w-[768px] mx-auto text-center  pb-[40px]">
         <h5 className="text-primary-700 font-semibold">Tutors</h5>
-        <h2 className="text-secondary font-semibold lg:text-[36px] mt-3">
+        <h2 className="text-secondary font-semibold text-[26px] sm:text-[36px] mt-1 sm:mt-3 sm:leading-[44px]">
           Meet the Heroes
         </h2>
         <p className="text-[20px] text-secondary-500">

@@ -19,26 +19,32 @@ const HeroSection = () => {
               that help your knowledge growing.
             </p>
             <div className=" space-x-7">
-              <button className="bg-primary text-white font-bold  py-3 sm:py-4 px-5 sm:px-7 rounded-lg">
+              <button className="bg-primary text-white font-bold  py-2 ss:py-3 sm:py-4 px-3 ss:px-5 sm:px-7 rounded-lg">
                 Get Started
               </button>
-              <button className="bg-primary-200 text-primary font-bold  py-3 sm:py-4 px-5 sm:px-7 rounded-lg">
+              <button className="bg-primary-200 text-primary font-bold  py-2 ss:py-3 sm:py-4 px-3 ss:px-5 sm:px-7 rounded-lg">
                 Get free trial
               </button>
             </div>
 
             <div className=" flex items-center justify-between mt-[50px]">
               <div className="flex flex-col sm:flex-row items-center gap-2 font-Inter">
-                <img src={Speaking} alt="" />
-                <p className="text-secondary/70">Public Speaking</p>
+                <img className="w-[20px] sm:w-fit" src={Speaking} alt="" />
+                <p className="text-secondary/70 text-xs ss:text-base">
+                  Public Speaking
+                </p>
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-2 font-Inter">
-                <img src={Career} alt="" />
-                <p className="text-secondary/70">Career-Oriented</p>
+                <img className="w-[20px] sm:w-fit" src={Career} alt="" />
+                <p className="text-secondary/70 text-xs ss:text-base">
+                  Career-Oriented
+                </p>
               </div>
               <div className="flex flex-col sm:flex-row items-center gap-2 font-Inter">
-                <img src={Creative} alt="" />
-                <p className="text-secondary/70">Creative Thinking</p>
+                <img className="w-[20px] sm:w-fit" src={Creative} alt="" />
+                <p className="text-secondary/70 text-xs ss:text-base">
+                  Creative Thinking
+                </p>
               </div>
             </div>
           </div>

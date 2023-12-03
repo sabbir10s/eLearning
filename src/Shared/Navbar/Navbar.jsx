@@ -66,7 +66,7 @@ const Navbar = () => {
             <span className=" absolute right-2.5 top-2">
               <span className=" relative">
                 <svg
-                  className=" absolute right-0 top-1"
+                  className=" absolute right-0 top-[4px] xs:top-[5px] lg:top-[6px]"
                   width="12"
                   height="8"
                   viewBox="0 0 12 8"
@@ -111,7 +111,7 @@ const Navbar = () => {
           <div className="relative" ref={dropdownRef}>
             <button
               type="button"
-              className=" py-2 text-secondary transition"
+              className=" py-2 text-secondary-500 transition"
               onClick={toggleDropdown}
             >
               <svg

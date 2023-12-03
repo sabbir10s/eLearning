@@ -55,9 +55,9 @@ const ServiceSlider = () => {
         {serviceData.map((item) => (
           <div
             key={item.serviceName}
-            className="p-0 md:p-3 bg-transparent focus:outline-none w-full "
+            className="p-0 sm:p-3 focus:outline-none w-full "
           >
-            <div className="bg-white hover:bg-primary text-secondary hover:text-white group p-4 shadow-md rounded-md border border-[#D8D8D8]/40">
+            <div className="bg-white hover:bg-primary text-secondary hover:text-white group p-8 lg:p-10 shadow-md rounded-md border border-[#D8D8D8]/40">
               <div className="flex items-center gap-4">
                 <img
                   src={item.logo}
@@ -69,7 +69,7 @@ const ServiceSlider = () => {
                 </h3>
               </div>
               <p className="text-[#646464] group-hover:text-white pt-[30px] pb-[22px]">
-                {item.details.description.slice(0, 100)}
+                {item.details.description.slice(0, 53)}
               </p>
               <button className="text-primary group-hover:text-white font-medium text-[18px] flex items-center gap-[20px]">
                 <span> Learn more</span>
@@ -95,7 +95,7 @@ const ServiceSlider = () => {
         ))}
       </Slider>
 
-      <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2">
         {serviceData.map((_, index) => (
           <button
             key={index}

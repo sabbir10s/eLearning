@@ -8,15 +8,7 @@ export const Blogs = [
     details:
       "Explore the journey of UI/UX design from its early days to the latest trends. Learn how user interfaces have evolved to meet the changing needs of users.",
     cover_photo: uiUx,
-    tags: ["UI/UX", "Design", "User Experience"],
-  },
-  {
-    date: "2023-02-28",
-    title: "Web Development Best Practices in 2023",
-    details:
-      "Discover the latest best practices and techniques in web development. Stay updated on the tools and technologies that are shaping the web development landscape.",
-    cover_photo: ThreePillars,
-    tags: ["Web Development", "Frontend", "Backend"],
+    tags: ["UI/UX", "Design"],
   },
   {
     date: "2023-03-20",
@@ -24,8 +16,17 @@ export const Blogs = [
     details:
       "Explore the cutting-edge innovations in the field of research and development. Learn how technology advancements are driving new possibilities in various industries.",
     cover_photo: agileDevelopment,
-    tags: ["Research", "Development", "Technology"],
+    tags: ["Research", "Development"],
   },
+  {
+    date: "2023-02-28",
+    title: "Web Development in 2023",
+    details:
+      "Discover the latest best practices and techniques in web development. Stay updated on the tools and technologies that are shaping the web development landscape.",
+    cover_photo: ThreePillars,
+    tags: ["Development", "Frontend"],
+  },
+
   {
     date: "2023-04-10",
     title: "Building Responsive UIs with Flexbox and Grid",

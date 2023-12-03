@@ -65,7 +65,7 @@ const CoursesSlider = () => {
             author,
             price,
           }) => (
-            <div key={name} className="p-0 md:p-3 focus:outline-none">
+            <div key={name} className="p-0 sm:p-3 focus:outline-none">
               <div className="p-6 shadow-md rounded-lg relative">
                 <div className="w-full h-full mb-4">
                   <img
@@ -139,7 +139,7 @@ const CoursesSlider = () => {
         )}
       </Slider>
 
-      <div className="absolute bottom-[-40px] left-1/2 transform -translate-x-1/2">
+      <div className="absolute bottom-[-60px] left-1/2 transform -translate-x-1/2">
         {Courses.map((_, index) => (
           <button
             key={index}

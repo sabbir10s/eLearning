@@ -22,7 +22,7 @@ const HeroSection = () => {
               <button className="bg-primary text-white font-bold  py-2 ss:py-3 sm:py-4 px-3 ss:px-5 sm:px-7 rounded-lg">
                 Get Started
               </button>
-              <button className="bg-primary-200 text-primary font-bold  py-2 ss:py-3 sm:py-4 px-3 ss:px-5 sm:px-7 rounded-lg">
+              <button className="bg-primary-100 text-primary font-bold  py-2 ss:py-3 sm:py-4 px-3 ss:px-5 sm:px-7 rounded-lg">
                 Get free trial
               </button>
             </div>
@@ -49,7 +49,7 @@ const HeroSection = () => {
             </div>
           </div>
           <div className="flex justify-end order-1 md:order-2">
-            <img className=" w-[320px] ss:w-full" src={bannerImg} alt="" />
+            <img className="w-full" src={bannerImg} alt="" />
           </div>
         </div>
       </div>

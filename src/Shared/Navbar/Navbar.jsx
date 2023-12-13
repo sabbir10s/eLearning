@@ -75,7 +75,7 @@ const Navbar = () => {
                 >
                   <path
                     d="M1 1.5L6 6.5L11 1.5"
-                    stroke="#7F56D9"
+                    className=" text-primary stroke-current"
                     strokeWidth="2"
                     strokeLinecap="round"
                     strokeLinejoin="round"
